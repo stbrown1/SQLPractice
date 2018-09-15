@@ -35,5 +35,21 @@ namespace SQLPractice
 
         }
 
+        public void CreateProduct(string n, double p)
+        {
+            MySqlConnection conn = new MySqlConnection(connectionString);
+
+            using (conn)
+            {
+                conn.Open();
+
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "INSERT INTO product (name, ListPrice) VALUES (@name, @price);";
+                cmd.Parameters.AddWithValue("name", n);
+                cmd.Parameters.AddWithValue("price", p);
+                cmd.ExecuteNonQuery();
+                
+            }
+        }
     }
 }

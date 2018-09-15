@@ -1,0 +1,11 @@
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/bin/Debug/netcoreapp2.1/SQLPractice.deps.json
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/bin/Debug/netcoreapp2.1/SQLPractice.runtimeconfig.json
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/bin/Debug/netcoreapp2.1/SQLPractice.runtimeconfig.dev.json
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/bin/Debug/netcoreapp2.1/SQLPractice.dll
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/bin/Debug/netcoreapp2.1/SQLPractice.pdb
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/obj/Debug/netcoreapp2.1/SQLPractice.csprojAssemblyReference.cache
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/obj/Debug/netcoreapp2.1/SQLPractice.csproj.CoreCompileInputs.cache
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/obj/Debug/netcoreapp2.1/SQLPractice.AssemblyInfoInputs.cache
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/obj/Debug/netcoreapp2.1/SQLPractice.AssemblyInfo.cs
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/obj/Debug/netcoreapp2.1/SQLPractice.dll
+/Users/stephenbrown/Projects/SQLPractice/SQLPractice/obj/Debug/netcoreapp2.1/SQLPractice.pdb

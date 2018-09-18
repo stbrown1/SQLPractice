@@ -51,5 +51,46 @@ namespace SQLPractice
                 
             }
         }
+
+        public void UpdateProduct(int pId, string n, double p)
+        {
+            var conn = new MySqlConnection(connectionString);
+
+            using (conn)
+            {
+                conn.Open();
+
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = "UPDATE product SET Name = @name, ListPrice = @price WHERE ProductID = @productID;";
+                cmd.Parameters.AddWithValue("name", n);
+                cmd.Parameters.AddWithValue("price", p);
+                cmd.Parameters.AddWithValue("productID", pId);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void DeleteProduct(int id)
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = "DELETE FROM Product WHERE ProductId = @pId;";
+                cmd.Parameters.AddWithValue("pId", id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void DeleteProduct(string name)
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = "DELETE FROM Product WHERE Name = @name;";
+                cmd.Parameters.AddWithValue("name", name);
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

@@ -17,7 +17,15 @@ namespace SQLPractice
 
             Console.WriteLine("Creating Product...");
             repo.CreateProduct("newProduct", 100.5);
-            Console.WriteLine("Product Created");
+            Console.WriteLine("Product Created!");
+
+            //Console.WriteLine("Updating Product...");
+            //repo.UpdateProduct(1004, "Updated", 100);
+            //Console.WriteLine("Product Updated!");
+
+            //Console.WriteLine("Deleting Product...");
+            //repo.DeleteProduct(1001);
+            //Console.WriteLine("Product Deleted!");
 
             Console.ReadLine();
         }

@@ -35,7 +35,7 @@ namespace SQLPractice
 
         }
 
-        public void CreateProduct(string n, double p)
+        public void CreateProduct(Product p)
         {
             MySqlConnection conn = new MySqlConnection(connectionString);
 
@@ -45,8 +45,8 @@ namespace SQLPractice
 
                 MySqlCommand cmd = conn.CreateCommand();
                 cmd.CommandText = "INSERT INTO product (name, ListPrice) VALUES (@name, @price);";
-                cmd.Parameters.AddWithValue("name", n);
-                cmd.Parameters.AddWithValue("price", p);
+                cmd.Parameters.AddWithValue("name", p.Name);
+                cmd.Parameters.AddWithValue("price", p.Price);
                 cmd.ExecuteNonQuery();
                 
             }
@@ -61,7 +61,7 @@ namespace SQLPractice
                 conn.Open();
 
                 var cmd = conn.CreateCommand();
-                cmd.CommandText = "UPDATE product SET Name = @name, ListPrice = @price WHERE ProductID = @productID;";
+                cmd.CommandText = "UPDATE product SET Name = '@name', ListPrice = @price WHERE ProductID = @productID;";
                 cmd.Parameters.AddWithValue("name", n);
                 cmd.Parameters.AddWithValue("price", p);
                 cmd.Parameters.AddWithValue("productID", pId);
@@ -87,8 +87,20 @@ namespace SQLPractice
             using (var conn = new MySqlConnection(connectionString))
             {
                 var cmd = conn.CreateCommand();
-                cmd.CommandText = "DELETE FROM Product WHERE Name = @name;";
+                cmd.CommandText = "DELETE FROM Product WHERE Name LIKE @name;";
+                cmd.Parameters.AddWithValue("name", "%" + name + "%");
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void DeleteProduct(string name, int id)
+        {
+            using (var conn = new MySqlConnection(connectionString))
+            {
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = "DELETE FROM Product WHERE Name LIKE @name AND ProductID = id;";
                 cmd.Parameters.AddWithValue("name", name);
+                cmd.Parameters.AddWithValue("id", id);
                 cmd.ExecuteNonQuery();
             }
         }

@@ -6,7 +6,12 @@ namespace SQLPractice
 {
     public class ProductRepository
     {
-        public string connectionString = "Server=127.0.0.1;Database=adventureworks;Uid=root;Pwd=password;";
+        private static string connectionString;
+
+        public ProductRepository(string _connectionString)
+        {
+            connectionString = _connectionString;
+        }
 
         public List<Product> GetProducts()
         {

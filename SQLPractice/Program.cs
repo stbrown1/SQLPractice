@@ -25,18 +25,31 @@ namespace SQLPractice
 
             //var repo = new ProductRepository(connString);
 
-            var addressRepo = new AddressRepository(connString);
+            //var addressRepo = new AddressRepository(connString);
 
-            var address = new Address();
-            address.Address1 = "123 Main St";
-            address.Address2 = "3.14 Sesame St";
-            address.City = "Hoover";
-            address.ProvinceId = 3;
-            address.PostalCode = "35244";
+            var dapperRepo = new DapperProductRepository(connString);
 
-            Console.WriteLine("Creating Address...");
-            addressRepo.CreateAddress(address);
-            Console.WriteLine("Address Created!");
+            var prod = new Product
+            {
+                Name = "New Dapper Product",
+                Price = 100
+            };
+
+            Console.WriteLine("Creating Product...");
+            dapperRepo.CreateProduct(prod);
+            Console.WriteLine("Product Created!");
+
+
+            //var address = new Address();
+            //address.Address1 = "123 Main St";
+            //address.Address2 = "3.14 Sesame St";
+            //address.City = "Hoover";
+            //address.ProvinceId = 3;
+            //address.PostalCode = "35244";
+
+            //Console.WriteLine("Creating Address...");
+            //addressRepo.CreateAddress(address);
+            //Console.WriteLine("Address Created!");
 
             //var list1 = repo.GetProducts();
 

@@ -39,6 +39,9 @@ namespace SQLPractice
             dapperRepo.CreateProduct(prod);
             Console.WriteLine("Product Created!");
 
+            Console.WriteLine("Deleting Product...");
+            dapperRepo.DeleteProduct(1003);
+            Console.WriteLine("Product Deleted!");
 
             //var address = new Address();
             //address.Address1 = "123 Main St";

@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 
 namespace SQLPractice
 {
-    public class ProductRepository
+    public class ProductRepository : IRepository
     {
         private static string connectionString;
 
@@ -57,7 +57,7 @@ namespace SQLPractice
             }
         }
 
-        public void UpdateProduct(int pId, string n, double p)
+        public void UpdateProduct(Product p)
         {
             var conn = new MySqlConnection(connectionString);
 
@@ -67,9 +67,9 @@ namespace SQLPractice
 
                 var cmd = conn.CreateCommand();
                 cmd.CommandText = "UPDATE product SET Name = '@name', ListPrice = @price WHERE ProductID = @productID;";
-                cmd.Parameters.AddWithValue("name", n);
-                cmd.Parameters.AddWithValue("price", p);
-                cmd.Parameters.AddWithValue("productID", pId);
+                cmd.Parameters.AddWithValue("name", p.Name);
+                cmd.Parameters.AddWithValue("price", p.Name);
+                cmd.Parameters.AddWithValue("productID", p.Id);
                 cmd.ExecuteNonQuery();
             }
         }

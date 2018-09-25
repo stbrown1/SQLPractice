@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{9596290F-FAEB-414D-A66D-919FF9C74B2D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SQLPractice/Address.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SQLPractice/DapperProductRepository.cs">
     <Files>
       <File FileName="SQLPractice/Program.cs" Line="65" Column="1" />
       <File FileName="SQLPractice/Product.cs" Line="1" Column="1" />
-      <File FileName="SQLPractice/ProductRepository.cs" Line="114" Column="1" />
+      <File FileName="SQLPractice/ProductRepository.cs" Line="65" Column="14" />
+      <File FileName="SQLPractice/IRepository.cs" Line="11" Column="42" />
       <File FileName="SQLPractice/appsettings.json" Line="5" Column="2" />
       <File FileName="SQLPractice/appsettings.Debug.json" Line="1" Column="1" />
       <File FileName="SQLPractice/AddressRepository.cs" Line="37" Column="1" />
       <File FileName="SQLPractice/Address.cs" Line="1" Column="1" />
+      <File FileName="SQLPractice/DapperProductRepository.cs" Line="9" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
